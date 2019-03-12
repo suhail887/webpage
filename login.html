@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+body{
+    background-color: #283747;
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e5e8e8;
+    font-size: 75px;
+}
+form {
+    background-color: #B2BABB;
+    border: 3px solid #B2BABB;
+    text-align: center;
+    border-radius: 40px;
+    padding: 70px 10px;
+    margin: 0px 250px;
+}
+input[type="text"], input[type="password"]{
+    width: 25%;
+    height: 5%;
+    display: inline-block;
+    border: 1px solid #B2BABB;
+    text-indent: 10px;  
+    border-radius: 10px;
+}
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: #283747;
+}
+button {
+  background-color: #283747;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  border-radius: 40px;
+}
+a{
+    color: #283747;
+}
+
+</style>
+</head>
+<body>
+        <h1>Login</h1>
+    <form name="ud" >  
+        <div id="login">
+            <label for="uname"><b>UserName</b></label><br>
+            <input type="text" placeholder="Enter UserName " name="uname" required><br><br>
+            <label for="pword"><b>PassWord</b></label><br>
+            <input type="password" placeholder="Enter PassWord " name="pword" required><br><br>
+            <button type="submit" onclick="login()"><b>></b></button><br>
+            <a href="signup.html">create a new account</a>
+        </div>
+    </form>
+    <script>
+        function login(){
+           var x= document.forms["ud"]["uname"].value;
+           var y= document.forms["ud"]["pword"].value;
+
+           if(x==""){
+                alert("enter valid name ");
+           }else if(y==""){
+               alert("enter valid password");
+           }else{
+               alert("successfully logged in");
+           }
+
+        }
+
+    </script>
+   </body>
+
+</html>
