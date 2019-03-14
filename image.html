@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            #container{
+                text-align: center;
+            }
+            #imagecontainer{
+                margin: 20px 500px;
+                height:400px;
+                width: 400px;
+                border: 1px groove black;
+            }
+            img{
+                margin: 20px;
+                height: 90%;
+                width: 90%;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="imagecontainer">        
+            <img src="lan1.jpg" id="image">
+            </div>
+            <button onclick="previous()">Previous Image</button>
+            <button onclick="next()">Next Image</button>
+        </div>
+        <script>
+            var i=1;
+            var x=4;
+            var a=["lan1.jpg","lan2.jpg","lan3.jpg","lan4.jpg","lan5.jpg"];
+
+            function next(){
+                if(i<4){
+                    var element= document.getElementById("image");
+                    element.setAttribute("src",a[i]);
+                    i++;
+                }else{
+                    i=0;
+                    var element= document.getElementById("image");
+                    element.setAttribute("src",a[i]);
+                }
+            }
+            function previous(){
+               
+                    var element= document.getElementById("image");
+                    element.setAttribute("src",a[x--]);
+                   
+                
+               if(x <=0) 
+               {
+                    x=4;
+                    var element= document.getElementById("image");
+                    element.setAttribute("src",a[x]);
+                }
+            }
+
+
+        
+        </script>
+    </body>
+</html>

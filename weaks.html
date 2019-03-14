@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script>
+            var days = ["Monday","Tuesday","Wednessday","Thursday","Friday","Saturday","Sunday"];
+            var indexofday=0;
+            var month =["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            function myfunction(){
+                document.getElementById("days").innerHTML= days[indexofday];
+                indexofday=indexofday< days.length-1 ? ++indexofday : 0;
+            }
+            function myfunction1(){
+                document.getElementById("month").innerHTML= month[indexofday];
+                indexofday=indexofday< month.length-1 ? ++indexofday : 0;
+            }
+        </script>
+        <style>
+        body{
+            background-color: rgb(253, 243, 152);
+        }
+            #weeks{
+                background-color: rgb(255, 249, 191);
+                border: 1px solid rgb(253, 243, 152);
+                text-align: center;
+                width: 50%;
+                height: 300px;
+                border-radius: 50px;
+                font-size:40px;
+                margin: 100px 300px;
+                padding: 50px 0px  0px 0px;
+            }
+            button{
+                background-color: rgb(255, 0, 0,0.75);
+                width: 120px;
+                height: 50px;
+                margin-top: 60px;
+                border-radius: 10px;
+                color: whitesmoke;
+            }
+            button:hover{
+                background-color: rgba(255, 0, 0,1);
+            }
+            button:active{
+                background-color: rgb(253, 243, 152);
+                color: black;
+            }
+            div.a{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div id="weeks">
+            <div class="a" id="days">Days in a Weak</div>
+            <div class="a" id="month">Months in a Year</div>
+            <button id="b1" onclick="myfunction()">Next Day</button>
+            <button id="b2" onclick="myfunction1()">Next Month</button>
+        </div>
+    </body>
+</html>

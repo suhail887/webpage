@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>webpage design another exercise</title>
+        <style>
+            body{
+                margin: 0px;
+                width:100%;
+                height:auto;
+            }
+            .container{
+                width:80%;
+                height:auto;
+                margin-left:10%;
+                margin-top:50px;
+                background:rgb(250, 232, 232);
+                box-shadow: 10px 10px 5px grey;
+            }
+            .margin{
+                width:90%;
+                height:auto;
+                margin-left:5%;
+            }
+            h1{
+                text-align:center;
+            }
+            .img1{
+                margin-left:40%;
+                margin-bottom:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="margin">
+                <h1 id="head1">Lorem Ipsum</h1>
+                <h1 id="head2" style="display: none">Will Smith</h1>
+                <p id="para1">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a 
+                    galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but 
+                    also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s 
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p id="para2" style="display: none">Will Smith has been ranked as the most bankable star worldwide by Forbes.[6]
+                        As of 2014, 17 of the 21 films in which he has had leading roles have accumulated worldwide gross earnings of over $100 
+                        million each, with five taking in over $500 million each in global box office receipts. As of 2016, his films have grossed
+                         $7.5 billion at the global box office.[7] For his performances as boxer Muhammad Ali in Ali (2001) and stockbroker Chris 
+                         Gardner in The Pursuit of Happyness (2006), Smith received nominations for the Academy Award for Best Actor
+                </p>
+                <div id="image">
+                <img src="download.jpg" alt="Lorem ipsum images" id="img1" width="200px" height="200px"  usemap="#downloadmap" onclick="my()">
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <script>
+                var p1=document.getElementById("para1").innerHTML;
+                var p2=document.getElementById("para2").innerHTML;
+                var i= ["download.jpg","will.jpg"];
+                var attr=document.getElementById("img1");
+                var h1=document.getElementById("head1").innerHTML;
+                var h2=document.getElementById("head2").innerHTML;
+            function my(){
+                var p3=document.getElementById("para1").innerHTML;
+                var h3=document.getElementById("head1").innerHTML;
+                if(p3.charAt(0)=="L"){
+                    document.getElementById("para1").innerHTML=p2;
+                    attr.setAttribute("src",i[1]);
+                    document.getElementById("head1").innerHTML=h2;
+                }else{
+                    document.getElementById("para1").innerHTML=p1;
+                    attr.setAttribute("src",i[0]);
+                    document.getElementById("head1").innerHTML=h1;
+                }               
+
+                
+               }
+        </script>
+    </body>
+</html>

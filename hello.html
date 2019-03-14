@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="border">
+            <p id="container">Hello...</p>
+            <button id="button" onclick="my()">click me</button>
+        </div>
+        <script>
+            
+            function my(){
+                var pre = document.getElementById("container").innerHTML;
+                var pre_length = pre.length;
+                if(pre_length==0 ||  pre.charAt(pre.length-1)=="!"){
+                   pre = pre+"Hello...";
+                }
+                else{
+                    pre=pre+"Welcome!";
+                }
+                document.getElementById("container").innerHTML= pre;
+            }
+        </script>
+    </body>
+</html>
